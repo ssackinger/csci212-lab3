@@ -89,6 +89,7 @@ main:
 
     ldr r0, address_of_format
     b printf
+    b main_done
 
 main_loop:
     cmp r9, r2
