@@ -7,7 +7,7 @@ prompt: .asciz "Enter two positive integers:\t"
 format: .asciz "Prime numbers between %d and %d are:\t"
 
 .balign 4
-num_output: .asciz "%d "
+num_output: .asciz "#%d %d "
 
 .balign 4
 scan_pattern: .asciz "%d %d"
@@ -101,6 +101,7 @@ main_loop:
 
     ldr r0, address_of_num_output
     mov r1, r9
+    mov r2, r9
     bl printf
 
 main_iterate:
