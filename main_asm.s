@@ -91,12 +91,12 @@ main:
     bl printf
 
 main_loop:
-    cmp r9, r2
-    blt main_done
+    cmp r2, r9
+    bge main_done
 
     mov r0, r9
     bl checkPrimeNumber              @r0 is now the flag
-    cmp r0, #1
+    cmp r0, #0
 
     bne main_iterate
 
