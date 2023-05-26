@@ -43,7 +43,7 @@ main:
     mov r3, r1
 
     ldr r0, address_of_format
-    printf
+    b printf
 
     mov r0, r2
     mov r1, r3
