@@ -88,8 +88,7 @@ main:
     add r9, r0, #1                  @counter setup
 
     ldr r0, address_of_format
-    b printf
-    b main_done
+    bl printf
 
 main_loop:
     cmp r9, r2
