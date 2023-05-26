@@ -82,8 +82,8 @@ main:
 
     ldr r1, address_of_number_read_start
     ldr r1, [r1]
-    ldr r2, address_of_number_read_end
-    ldr r2, [r2]
+    ldr r7, address_of_number_read_end
+    ldr r7, [r7]
 
     add r9, r1, #1                  @counter setup
 
@@ -91,7 +91,7 @@ main:
     bl printf
 
 main_loop:
-    cmp r9, r2
+    cmp r9, r7
     bge main_done
 
     mov r0, r9
