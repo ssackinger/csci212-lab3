@@ -82,6 +82,7 @@ main:
 
     add r9, r1, #1                   @counter setup
 
+    mov r2, r7
     ldr r0, address_of_format
     bl printf
 
