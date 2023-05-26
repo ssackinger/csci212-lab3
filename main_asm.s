@@ -49,7 +49,7 @@ main_loop:
 
     bne main_iterate
 
-    mov r0, address_of_num_output
+    ldr r0, address_of_num_output
     mov r1, r9
     bl printf
     b main_loop                     @restart
