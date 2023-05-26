@@ -39,8 +39,8 @@ checkPrimeNumber_loop:
 checkPrimeNumber_testPrime:     @calculate mod
 
     udiv r1, r0, r7
-    mul r1, r1, r7
-    subs r2, r0, r1
+    mul r2, r1, r7
+    subs r1, r0, r2
     beq checkPrimeNumber_notPrime
 
     add r7, r7, #2
