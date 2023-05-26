@@ -10,7 +10,7 @@ checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     cmp r0, #2
     bne checkPrimeNumber_checkEven
     mov r0, #1
-    b checkPrimeNumber_done:
+    b checkPrimeNumber_done
 
 checkPrimeNumber_checkEven:
     ands r1, r0, #1
