@@ -7,6 +7,12 @@ checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
 
                                 @udiv r9, r0, #2
 
+    cmp r0, #2
+    bne checkPrimeNumber_checkEven
+    mov r0, #1
+    b checkPrimeNumber_done:
+
+checkPrimeNumber_checkEven:
     ands r1, r0, #1
     beq checkPrimeNumber_notPrime
 
