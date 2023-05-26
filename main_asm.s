@@ -21,7 +21,7 @@ number_read_end: .word 0
 .text
 
 
-
+/*
 @.global checkPrimeNumber
 checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     push {r1, r2, r7, lr}
@@ -63,7 +63,7 @@ checkPrimeNumber_done:          @return only the flag to main
 
     pop {r1, r2, r7, lr}
     bx lr
-
+*/
 
 
 
@@ -101,7 +101,7 @@ main_loop:
     bge main_done
 
     mov r0, r9
-    b checkPrimeNumber              @r0 is now the flag
+    bl checkPrimeNumber              @r0 is now the flag
     cmp r0, #1
 
     bne main_iterate
