@@ -52,7 +52,6 @@ main_loop:
     ldr r0, address_of_num_output
     mov r1, r9
     bl printf
-    b main_loop                     @restart
 
 main_iterate:
     add r9, r9, #1
