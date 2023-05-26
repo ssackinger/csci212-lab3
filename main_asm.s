@@ -97,8 +97,7 @@ main_loop:
     mov r0, r9
     bl checkPrimeNumber              @r0 is now the flag
     cmp r0, #0
-
-    bne main_iterate
+    beq main_iterate
 
     ldr r0, address_of_num_output
     mov r1, r9
