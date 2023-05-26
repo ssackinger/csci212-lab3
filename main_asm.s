@@ -87,14 +87,14 @@ main:
 
     add r9, r0, #1                  @counter setup
 
-    mov r2, r0
-    mov r3, r1
+    @mov r2, r0
+    @mov r3, r1
 
     ldr r0, address_of_format
     b printf
 
-    mov r0, r2
-    mov r1, r3
+    @mov r0, r2
+    @mov r1, r3
 
 main_loop:
     cmp r9, r1
