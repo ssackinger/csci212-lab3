@@ -92,7 +92,7 @@ main:
 
 main_loop:
     cmp r2, r9
-    bge main_done
+    blt main_done
 
     mov r0, r9
     bl checkPrimeNumber              @r0 is now the flag
