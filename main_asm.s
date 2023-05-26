@@ -21,7 +21,7 @@ number_read_end: .word 0
 .text
 
 
-/*
+
 @.global checkPrimeNumber
 checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     push {r1, r2, r7, lr}
@@ -63,7 +63,7 @@ checkPrimeNumber_done:          @return only the flag to main
 
     pop {r1, r2, r7, lr}
     bx lr
-*/
+
 
 
 
