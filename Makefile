@@ -1,17 +1,17 @@
 CC=gcc
 CFLAGS= -std=c99 -ggdb -Wall -I.
-OBJ = main.o prime.o
+OBJ = main.o checkPrimeNumber.o
 DEPS =
 
 all: prime
 
-prime: main.o prime.o
+prime: $(OBJ)
 	gcc -o $@ $+
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-prime.o : prime.s
+checkPrimeNumber.o : checkPrimeNumber.s
 	as -o $@ $<
 
 clean:
