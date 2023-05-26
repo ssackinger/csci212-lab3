@@ -80,15 +80,12 @@ main:
     ldr r2, address_of_number_read_end    /* r2 ← &number_read */
     bl scanf                                /* call to scanf */
 
-    ldr r0, address_of_number_read_start
-    ldr r0, [r0]
-    ldr r1, address_of_number_read_end
+    ldr r1, address_of_number_read_start
     ldr r1, [r1]
+    ldr r2, address_of_number_read_end
+    ldr r2, [r2]
 
     add r9, r0, #1                  @counter setup
-
-    @mov r2, r0
-    @mov r3, r1
 
     ldr r0, address_of_format
     b printf
