@@ -18,7 +18,8 @@ unsigned_divide:
     bx lr
 */
 
-EXPORT checkPrimeNumber
+global checkPrimeNumber
+
 checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     push {r1, r2, r7, lr}
 
