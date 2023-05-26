@@ -90,11 +90,8 @@ main:
     ldr r0, address_of_format
     b printf
 
-    @mov r0, r2
-    @mov r1, r3
-
 main_loop:
-    cmp r9, r1
+    cmp r9, r2
     bge main_done
 
     mov r0, r9
