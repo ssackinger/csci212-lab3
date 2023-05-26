@@ -20,13 +20,8 @@ number_read_end: .word 0
 
 .text
 
-
-
-@.global checkPrimeNumber
 checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     push {r1, r2, r7, lr}
-
-                                @udiv r9, r0, #2
 
     cmp r0, #2
     bne checkPrimeNumber_checkEven
@@ -85,7 +80,7 @@ main:
     ldr r7, address_of_number_read_end
     ldr r7, [r7]
 
-    add r9, r1, #1                  @counter setup
+    add r9, r1, #1                   @counter setup
 
     ldr r0, address_of_format
     bl printf
@@ -111,7 +106,7 @@ main_done:
     mov r0, #0
 
     pop {lr}
-    bx lr                            /* return from main using lr */
+    bx lr
 
 
 address_of_prompt: .word prompt
