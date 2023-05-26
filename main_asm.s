@@ -91,7 +91,7 @@ main:
     bl printf
 
 main_loop:
-    cmp r2, r9
+    cmp r9, r2
     bge main_done
 
     mov r0, r9
