@@ -85,7 +85,7 @@ main:
     ldr r2, address_of_number_read_end
     ldr r2, [r2]
 
-    add r9, r0, #1                  @counter setup
+    add r9, r1, #1                  @counter setup
 
     ldr r0, address_of_format
     bl printf
