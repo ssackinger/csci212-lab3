@@ -1,25 +1,7 @@
-/*
-unsigned_divide:
-    push {r1, r2, lr}
-    mov r2, r1
-    mov r1, r0
+.data
+.text
 
-    mov r0, #0
-
-    b .Ldivide_check
-    .Ldivide_loop:
-        add r0, r0, #1          @add 1 to quotient
-        sub r1, r1, r2          @subtract r2 from r1 once
-    .Ldivide_check:
-        cmp r1, r2
-        bhs .Ldivide_loop
-
-    pop {r2}
-    bx lr
-*/
-
-global checkPrimeNumber
-
+.global checkPrimeNumber
 checkPrimeNumber:                @r0 is incoming #, returns 1 or 0 in r0
     push {r1, r2, r7, lr}
 
@@ -72,5 +54,25 @@ checkPrimeNumber_done:          @return only the flag to main
 
         @update flag to false
         @can exit here because if it evaluates to true one time then its composite regardless
+*/
+
+/*
+unsigned_divide:
+    push {r1, r2, lr}
+    mov r2, r1
+    mov r1, r0
+
+    mov r0, #0
+
+    b .Ldivide_check
+    .Ldivide_loop:
+        add r0, r0, #1          @add 1 to quotient
+        sub r1, r1, r2          @subtract r2 from r1 once
+    .Ldivide_check:
+        cmp r1, r2
+        bhs .Ldivide_loop
+
+    pop {r2}
+    bx lr
 */
 
